@@ -454,7 +454,7 @@ impl Ini {
     }
 
     ///Private function that parses ini-style syntax into a Map.
-    fn parse(&self, input: String) -> Result<Map<String, Map<String, Option<String>>>, String> {
+    pub fn parse(&self, input: String) -> Result<Map<String, Map<String, Option<String>>>, String> {
         let mut map: Map<String, Map<String, Option<String>>> = Map::new();
         let mut section = self.default_section.clone();
         let mut current_key: Option<String> = None;
